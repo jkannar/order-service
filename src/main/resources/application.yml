@@ -1,0 +1,27 @@
+server:
+  port: 9002
+  shutdown: graceful
+  netty:
+    connection-timeout: 5s
+
+spring:
+  application:
+    name: order-service
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  r2dbc:
+    username: postgres
+    password: Miasanmia123
+    url: "r2dbc:postgresql://polar-postgres-order:5432/polardb_order"
+    pool:
+      max-create-connection-time: 5s
+      initial-size: 5
+      max-size: 10
+  flyway:
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+    url: "jdbc:postgresql://polar-postgres-order:5432/polardb_order"
+    baseline-on-migrate: true
+
+polar:
+  catalog-service-url: "http://localhost:9001"
