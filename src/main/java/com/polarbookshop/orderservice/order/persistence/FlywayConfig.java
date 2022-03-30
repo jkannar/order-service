@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
-// https://stackoverflow.com/a/61412233
+// This is not needed for simple RDBC, but it seems that R2DBC doesn't
+// work without this class...
 @Configuration
 public class FlywayConfig {
 

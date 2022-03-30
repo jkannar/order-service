@@ -24,4 +24,4 @@ spring:
     baseline-on-migrate: true
 
 polar:
-  catalog-service-url: "http://localhost:9001"
+  catalog-service-url: "http://catalog-service:9001"
