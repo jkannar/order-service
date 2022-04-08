@@ -29,11 +29,11 @@ public class OrderService {
                 .flatMap(orderRepository::save);
     }
 
-    private Order buildRejectedOrder(String isbn, int quantity) {
+    public static Order buildRejectedOrder(String isbn, int quantity) {
         return new Order(isbn, quantity, OrderStatus.REJECTED);
     }
 
-    private Order buildAcceptedOrder(Book book, int quantity) {
+    public static Order buildAcceptedOrder(Book book, int quantity) {
         return new Order(book.getIsbn(), book.getAuthor() + "---" + book.getTitle(),
                 book.getPrice(),
                 quantity,
