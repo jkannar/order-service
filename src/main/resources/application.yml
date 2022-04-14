@@ -9,6 +9,8 @@ spring:
     name: order-service
   lifecycle:
     timeout-per-shutdown-phase: 15s
+  config:
+    import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
   r2dbc:
     username: postgres
     password: Miasanmia123
