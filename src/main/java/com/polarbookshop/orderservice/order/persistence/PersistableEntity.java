@@ -1,6 +1,8 @@
 package com.polarbookshop.orderservice.order.persistence;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -12,6 +14,8 @@ import java.sql.Timestamp;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class PersistableEntity {
 
     @Id
